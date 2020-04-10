@@ -1,0 +1,63 @@
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+
+const Footer = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        mobileImage: file(relativePath: { eq: "carlosgm-bg769.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 769, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        desktopImage: file(
+          relativePath: { eq: "carlosgm-bg1024.png" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 1024, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        tabletImage: file(
+          relativePath: { eq: "carlosgm-bg1216.png" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 1216, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        hdImage: file(
+          relativePath: { eq: "carlosgm-bg1408.png" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 1408, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  );
+  const sources = [
+    data.mobileImage.childImageSharp.fluid,
+    { ...data.tabletImage.childImageSharp.fluid, media: `(mind-width: 769px)` },
+    { ...data.desktopImage.childImageSharp.fluid, media: `(mind-width: 1024px)` },
+    { ...data.hdImage.childImageSharp.fluid, media: `(mind-width: 1216px)` },
+  ];
+  return (
+    <footer className="container">
+      <Img fluid={sources} />
+      <div>
+        <div>Made with &hearts; using <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a></div>
+        <div>Art by the amazing <a href="https://lewesherriot.carbonmade.com/" target="_blank">Lewes Herriot</a></div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
