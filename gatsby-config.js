@@ -19,8 +19,8 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          { family: `Pacifico` },
-          { family: `Arimo` },
+          { family: `Permanent Marker` },
+          { family: `Overpass` },
         ],
       }
     },

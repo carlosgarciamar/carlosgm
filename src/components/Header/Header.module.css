@@ -1,0 +1,17 @@
+.titleHeader {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.title {
+    text-decoration: none !important;
+}
+
+.gm {
+    color: #D84B39;
+}
+
+.dragon {
+    position: relative;
+    top: 5px;
+}

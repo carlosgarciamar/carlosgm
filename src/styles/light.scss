@@ -1,3 +1,64 @@
 @charset "utf-8";
 
+$family-sans-serif: 'Overpass', sans-serif;
+
 @import "~bulma/bulma.sass";
+
+body {
+    font-family: 'Overpass', sans-serif;
+}
+
+a {
+    color: #222;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Permanent Marker', serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Permanent Marker', serif;
+    margin-bottom: 0.4rem;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+p, ol, ul {
+    margin-bottom: 0.8rem;
+}
+
+ol, ul {
+    padding-left: 16px;
+    li {
+        margin-bottom: 0.4rem;
+    }
+}
+
+main, header {
+    border-right: 2px solid #3d3d37;
+    border-left: 3px solid #3d3f44;
+    margin-left: 1px;
+    margin-right: 2px;
+    padding-left: 0.4rem;
+}
+
+header {
+    border-top: 2px solid #3d3f44;
+    margin-top: 1rem;
+    padding-bottom: 1.4rem;
+    padding-top: 0.8rem;
+}
+
+main {
+    margin-bottom: -38vw;
+    padding-bottom: calc(38vw - 8px);
+    padding-right: 0.4rem;
+}

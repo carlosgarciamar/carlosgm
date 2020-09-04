@@ -2,6 +2,8 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
+import s from './Footer.module.css';
+
 const Footer = () => {
   const data = useStaticQuery(
     graphql`
@@ -52,9 +54,9 @@ const Footer = () => {
   return (
     <footer className="container">
       <Img fluid={sources} />
-      <div>
-        <div>Made with &hearts; using <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a></div>
+      <div className={s.acknowledgments}>
         <div>Art by the amazing <a href="https://lewesherriot.carbonmade.com/" target="_blank">Lewes Herriot</a></div>
+        <div>Made with &hearts; using <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a></div>
       </div>
     </footer>
   );
