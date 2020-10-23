@@ -6,7 +6,7 @@ $tablet: 576px;
     margin-right: 10px;
 
     @media screen and (min-width: $tablet) {
-        top: -16px;
+        top: 16px;
     }
 }
 
@@ -21,4 +21,10 @@ $tablet: 576px;
 .dragon {
     position: relative;
     top: 5px;
+    left: -50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
 }

@@ -13,8 +13,23 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-external-links`,
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

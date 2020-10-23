@@ -1,11 +1,12 @@
 import { Link, graphql, useStaticQuery } from "gatsby";
-import PropTypes from "prop-types";
 import React from "react";
 import Img from 'gatsby-image';
 
 import s from './Header.module.scss';
 
-const Header = ({ siteTitle }) => {
+import LanguageSwitch from '../LanguageSwitch';
+
+const Header = () => {
     const data = useStaticQuery(
         graphql`
         query {
@@ -44,7 +45,7 @@ const Header = ({ siteTitle }) => {
     ];
     return (
         <header>
-            <div>
+            <div className={s.header}>
                 <h1 className={s.titleHeader}>
                     <Link
                         to="/"
@@ -54,17 +55,10 @@ const Header = ({ siteTitle }) => {
                     </Link>
                 </h1>
                 <Img fixed={sources} className={s.dragon} />
+                <LanguageSwitch en />
             </div>
         </header>
     );
-};
-
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-    siteTitle: ``,
 };
 
 export default Header;
