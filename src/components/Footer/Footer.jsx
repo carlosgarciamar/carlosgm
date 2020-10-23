@@ -15,15 +15,6 @@ const Footer = () => {
             }
           }
         }
-        desktopImage: file(
-          relativePath: { eq: "carlosgm-bg1024.png" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 1024, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         tabletImage: file(
           relativePath: { eq: "carlosgm-bg1216.png" }
         ) {
@@ -33,11 +24,11 @@ const Footer = () => {
             }
           }
         }
-        hdImage: file(
-          relativePath: { eq: "carlosgm-bg1408.png" }
+        desktopImage: file(
+          relativePath: { eq: "carlosgm-bg1024.png" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1408, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -47,12 +38,11 @@ const Footer = () => {
   );
   const sources = [
     data.mobileImage.childImageSharp.fluid,
-    { ...data.tabletImage.childImageSharp.fluid, media: `(mind-width: 769px)` },
-    { ...data.desktopImage.childImageSharp.fluid, media: `(mind-width: 1024px)` },
-    { ...data.hdImage.childImageSharp.fluid, media: `(mind-width: 1216px)` },
+    { ...data.tabletImage.childImageSharp.fluid, media: `(min-width: 576px)` },
+    { ...data.desktopImage.childImageSharp.fluid, media: `(min-width: 769px)` }
   ];
   return (
-    <footer className="container">
+    <footer>
       <Img fluid={sources} />
       <div className={s.acknowledgments}>
         <div>Art by the amazing <a href="https://lewesherriot.carbonmade.com/" target="_blank">Lewes Herriot</a></div>

@@ -3,54 +3,44 @@ import PropTypes from "prop-types";
 import React from "react";
 import Img from 'gatsby-image';
 
-import s from './Header.module.css';
+import s from './Header.module.scss';
 
 const Header = ({ siteTitle }) => {
     const data = useStaticQuery(
         graphql`
         query {
-        mobileImage: file(relativePath: { eq: "dragon-orig.png" }) {
-            childImageSharp {
-            fixed(width: 110) {
-                ...GatsbyImageSharpFixed
+            mobileImage: file(relativePath: { eq: "dragon-orig.png" }) {
+                childImageSharp {
+                fixed(width: 110) {
+                    ...GatsbyImageSharpFixed
+                }
+                }
             }
+            tabletImage: file(
+                relativePath: { eq: "dragon-orig.png" }
+            ) {
+                childImageSharp {
+                fixed(width: 220) {
+                    ...GatsbyImageSharpFixed
+                }
+                }
             }
-        }
-        desktopImage: file(
-            relativePath: { eq: "dragon-orig.png" }
-        ) {
-            childImageSharp {
-            fixed(width: 1024) {
-                ...GatsbyImageSharpFixed
+            desktopImage: file(
+                relativePath: { eq: "dragon-orig.png" }
+            ) {
+                childImageSharp {
+                fixed(width: 120) {
+                    ...GatsbyImageSharpFixed
+                }
+                }
             }
-            }
-        }
-        tabletImage: file(
-            relativePath: { eq: "dragon-orig.png" }
-        ) {
-            childImageSharp {
-            fixed(width: 1216, quality: 100) {
-                ...GatsbyImageSharpFixed
-            }
-            }
-        }
-        hdImage: file(
-            relativePath: { eq: "dragon-orig.png" }
-        ) {
-            childImageSharp {
-            fixed(width: 1408) {
-                ...GatsbyImageSharpFixed
-            }
-            }
-        }
         }
     `
     );
     const sources = [
     data.mobileImage.childImageSharp.fixed,
-    { ...data.tabletImage.childImageSharp.fixed, media: `(mind-width: 769px)` },
-    { ...data.desktopImage.childImageSharp.fixed, media: `(mind-width: 1024px)` },
-    { ...data.hdImage.childImageSharp.fixed, media: `(mind-width: 1216px)` },
+    { ...data.tabletImage.childImageSharp.fixed, media: `(min-width: 576px)` },
+    { ...data.desktopImage.childImageSharp.fixed, media: `(min-width: 769px)` },
     ];
     return (
         <header>

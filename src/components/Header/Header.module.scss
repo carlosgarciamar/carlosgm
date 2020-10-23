@@ -1,6 +1,13 @@
+$tablet: 576px;
+
 .titleHeader {
     display: inline-block;
+    position: relative;
     margin-right: 10px;
+
+    @media screen and (min-width: $tablet) {
+        top: -16px;
+    }
 }
 
 .title {

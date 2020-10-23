@@ -8,15 +8,6 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h2>Oh, I think we should just stay friends.</h2>
-    <p>Large bet on myself in round one. I'm sorry, guys. I never meant to hurt you. Just to destroy everything you ever believed in. Well, thanks to the Internet, I'm now bored with sex. Is there a place on the web that panders to my lust for violence?</p>
-    <p>Okay, I like a challenge. Why am I sticky and naked? Did I miss something fun? <strong> File not found.</strong> <em> Have you ever tried just turning off the TV, sitting down with your children, and hitting them?</em> No, just a regular mistake.</p>
-    <h2>Hey, guess what you're accessories to.</h2>
-    <p>I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money. Look, everyone wants to be like Germany, but do we really have the pure strength of 'will'?</p>
-    <ol>
-    <li>Just once I'd like to eat dinner with a celebrity who isn't bound and gagged.</li><li>Bender, this is Fry's decision… and he made it wrong. So it's time for us to interfere in his life.</li><li>Hello, little man. I will destroy you!</li>
-    </ol>
-
     <h3>I was having the most wonderful dream. Except you were there, and you were there, and you were there!</h3>
     <p>And I'm his friend Jesus. With gusto. Bender, this is Fry's decision… and he made it wrong. So it's time for us to interfere in his life. Are you crazy? I can't swallow that. THE BIG BRAIN AM WINNING AGAIN! I AM THE GREETEST! NOW I AM LEAVING EARTH, FOR NO RAISEN!</p>
     <ul>
