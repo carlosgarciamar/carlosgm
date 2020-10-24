@@ -23,8 +23,17 @@ export const query = graphql`
 ;
 
 const IndexPage = ({ data }) => {
-  const { node } = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === LANGUAGE);
-  const { html } = node;
+  let html = <div><h2>Language not defined</h2></div>;
+
+  if (LANGUAGE) {
+    const edge = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === LANGUAGE);
+
+    if (edge) {
+      html = edge.node.html;
+    } else {
+      html = <div><h2>Content not found</h2></div>;
+    }
+  }
 
   return (
     <Layout>
