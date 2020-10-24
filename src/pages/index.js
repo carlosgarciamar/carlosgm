@@ -3,8 +3,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const { LANGUAGE } = process.env;
-
 export const query = graphql`
     query MyQuery {
       allMarkdownRemark(filter: {frontmatter: {categories: {in: "welcome"}}}) {
@@ -23,10 +21,11 @@ export const query = graphql`
 ;
 
 const IndexPage = ({ data }) => {
-  let html = `<div><h2>Language not defined</h2></div><div>${process.env.NODE_ENV}</div><div>${LANGUAGE}</div>`;
+  const { GATSBY_LANGUAGE } = process.env;
+  let html = `<div><h2>Language not defined</h2></div><div>${process.env.NODE_ENV}</div><div>${GATSBY_LANGUAGE}</div>`;
 
-  if (LANGUAGE) {
-    const edge = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === LANGUAGE);
+  if (GATSBY_LANGUAGE) {
+    const edge = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === GATSBY_LANGUAGE);
 
     if (edge) {
       html = edge.node.html;
