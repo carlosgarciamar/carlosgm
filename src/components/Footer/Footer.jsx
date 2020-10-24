@@ -45,8 +45,8 @@ const Footer = () => {
     <footer>
       <Img fluid={sources} />
       <div className={s.acknowledgments}>
-        <div>Art by the amazing <a href="https://lewesherriot.carbonmade.com/" target="_blank">Lewes Herriot</a></div>
-        <div>Made with &hearts; using <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a></div>
+        <div>Art by the amazing <a href="https://lewesherriot.carbonmade.com/" rel="noreferrer" target="_blank">Lewes Herriot</a></div>
+        <div>Made with &hearts; using <a href="https://www.gatsbyjs.org" rel="noreferrer" target="_blank">Gatsby</a></div>
       </div>
     </footer>
   );

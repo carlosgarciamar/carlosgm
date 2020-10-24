@@ -3,21 +3,28 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+const { LANGUAGE } = process.env;
+
 export const query = graphql`
-  query {
-    markdownRemark(frontmatter: {categories: {eq: "welcome"}}) {
-      id
-      html
+    query MyQuery {
+      allMarkdownRemark(filter: {frontmatter: {categories: {in: "welcome"}}}) {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              language
+            }
+          }
+        }
+      }
     }
-  }
-`;
+  `
+;
 
 const IndexPage = ({ data }) => {
-  const { html } = data.markdownRemark || (
-    <div>
-      <h2>Welcome content not found</h2>
-    </div>
-  );
+  const { node } = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === LANGUAGE);
+  const { html } = node;
 
   return (
     <Layout>

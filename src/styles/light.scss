@@ -5,6 +5,7 @@ $big-phone: 384px;
 $tablet: 576px;
 $desktop: 769px;
 $widescreen-enabled: false;
+$fullhd-enabled: false;
 
 @import "~bulma/bulma.sass";
 
@@ -93,5 +94,10 @@ main {
 
     @media screen and (min-width: $tablet) {
         padding-right: 1.8rem;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: -38em;
+        padding-bottom: calc(38em - 8px);
     }
 }

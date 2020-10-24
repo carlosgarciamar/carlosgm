@@ -6,6 +6,8 @@ import s from './Header.module.scss';
 
 import LanguageSwitch from '../LanguageSwitch';
 
+const { LANGUAGE } = process.env;
+
 const Header = () => {
     const data = useStaticQuery(
         graphql`
@@ -55,7 +57,10 @@ const Header = () => {
                     </Link>
                 </h1>
                 <Img fixed={sources} className={s.dragon} />
-                <LanguageSwitch en />
+                <LanguageSwitch
+                    en={LANGUAGE !== 'es'}
+                    es={LANGUAGE === 'es'}
+                />
             </div>
         </header>
     );
