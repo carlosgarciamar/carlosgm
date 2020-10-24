@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "carlosgm",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A blog created with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Carlos GM",
   "dependencies": {
     "bulma": "^0.8.1",
     "dotenv": "^8.2.0",
@@ -17,6 +17,7 @@
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^3.3.39",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.8.46",
     "gatsby-transformer-sharp": "^2.4.4",

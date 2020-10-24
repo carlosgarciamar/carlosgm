@@ -29,6 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        'excerpt_separator': '<!-- start -->',
         plugins: [
           {
             resolve: "gatsby-remark-external-links",
@@ -36,6 +37,12 @@ module.exports = {
               target: "_blank",
               rel: "nofollow noopener noreferrer"
             }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
           },
         ]
       }
