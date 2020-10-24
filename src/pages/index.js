@@ -5,16 +5,19 @@ import SEO from "../components/seo";
 
 export const query = graphql`
   query {
-    markdownRemark(id: {eq: "5c58cce8-f9cb-506e-baf7-88467f9c7c5c"}) {
+    markdownRemark(frontmatter: {categories: {eq: "welcome"}}) {
       id
       html
     }
   }
-  
 `;
 
 const IndexPage = ({ data }) => {
-  const { html } = data.markdownRemark;
+  const { html } = data.markdownRemark || (
+    <div>
+      <h2>Welcome content not found</h2>
+    </div>
+  );
 
   return (
     <Layout>
