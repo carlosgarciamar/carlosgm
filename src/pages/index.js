@@ -21,17 +21,14 @@ export const query = graphql`
 ;
 
 const IndexPage = ({ data }) => {
-  const { GATSBY_LANGUAGE } = process.env;
-  let html = `<div><h2>Language not defined</h2></div><div>${process.env.NODE_ENV}</div><div>${GATSBY_LANGUAGE}</div>`;
+  let html = `<div><h2>Language not defined</h2></div><div>${process.env.NODE_ENV}</div><div>${process.env.GATSBY_LANGUAGE}</div>`;
 
-  if (GATSBY_LANGUAGE) {
-    const edge = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === GATSBY_LANGUAGE);
+  const edge = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === process.env.GATSBY_LANGUAGE);
 
-    if (edge) {
-      html = edge.node.html;
-    } else {
-      html = '<div><h2>Content not found</h2></div>';
-    }
+  if (edge) {
+    html = edge.node.html;
+  } else {
+    html = '<div><h2>Content not found</h2></div>';
   }
 
   return (
