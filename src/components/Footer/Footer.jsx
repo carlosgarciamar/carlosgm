@@ -16,15 +16,6 @@ const Footer = () => {
           }
         }
         tabletImage: file(
-          relativePath: { eq: "carlosgm-bg1216.png" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 1216, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        desktopImage: file(
           relativePath: { eq: "carlosgm-bg1024.png" }
         ) {
           childImageSharp {
@@ -39,7 +30,6 @@ const Footer = () => {
   const sources = [
     data.mobileImage.childImageSharp.fluid,
     { ...data.tabletImage.childImageSharp.fluid, media: `(min-width: 576px)` },
-    { ...data.desktopImage.childImageSharp.fluid, media: `(min-width: 769px)` }
   ];
   return (
     <footer>

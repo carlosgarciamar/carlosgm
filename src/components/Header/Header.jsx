@@ -12,27 +12,18 @@ const Header = () => {
         query {
             mobileImage: file(relativePath: { eq: "dragon-orig.png" }) {
                 childImageSharp {
-                fixed(width: 98) {
-                    ...GatsbyImageSharpFixed
-                }
+                    fixed(width: 98) {
+                        ...GatsbyImageSharpFixed
+                    }
                 }
             }
             tabletImage: file(
                 relativePath: { eq: "dragon-orig.png" }
             ) {
                 childImageSharp {
-                fixed(width: 220) {
-                    ...GatsbyImageSharpFixed
-                }
-                }
-            }
-            desktopImage: file(
-                relativePath: { eq: "dragon-orig.png" }
-            ) {
-                childImageSharp {
-                fixed(width: 120) {
-                    ...GatsbyImageSharpFixed
-                }
+                    fixed(width: 220) {
+                        ...GatsbyImageSharpFixed
+                    }
                 }
             }
         }
@@ -41,7 +32,6 @@ const Header = () => {
     const sources = [
         data.mobileImage.childImageSharp.fixed,
         { ...data.tabletImage.childImageSharp.fixed, media: `(min-width: 576px)` },
-        { ...data.desktopImage.childImageSharp.fixed, media: `(min-width: 769px)` },
     ];
     return (
         <header>
