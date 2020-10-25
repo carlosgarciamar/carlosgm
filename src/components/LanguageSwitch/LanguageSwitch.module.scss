@@ -15,12 +15,17 @@ $tablet: 576px;
     display: block;
     transform: rotate(90deg);
     margin-bottom: -19px;
-    margin-top: -2px;
+    position: relative;
+    top: -2px;
+    left: -1px;
+    pointer-events: none;
 
     @media screen and (min-width: $tablet) {
         display: inline;
         transform: none;
         margin: 0 10px;
+        top: 0;
+        left: 0;
     }
 }
 
