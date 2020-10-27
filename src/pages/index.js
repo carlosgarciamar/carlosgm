@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+
+import SocialMedia from '../components/SocialMedia';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -25,6 +27,16 @@ const IndexPage = ({ data }) => {
 
   const edge = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.language === process.env.GATSBY_LANGUAGE);
 
+  const content = process.env.GATSBY_LANGUAGE === 'es'
+    ? {
+      socialMedia: 'Redes sociales',
+      last: 'Ultimos posts'
+    }
+    : {
+      socialMedia: 'Find me on...',
+      last: 'Last entries'
+    };
+
   if (edge) {
     html = edge.node.html;
   } else {
@@ -33,8 +45,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO lang={process.env.GATSBY_LANGUAGE} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
+      <h2>{content.socialMedia}</h2>
+      <SocialMedia withTitle />
     </Layout>
   );
 }

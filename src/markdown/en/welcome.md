@@ -22,11 +22,3 @@ Beyond these technologies, I am also interested in the following approaches to s
 I might also ramble sometimes about philosophy, politics and music. I can easily be found at live music gigs and festivals or at [Crossfit Digbeth](https://www.crossfitdigbeth.com/).
 
 Currently living in [Birmingham](https://www.google.com/maps/place/Birmingham,+United+Kingdom/) and working at [Shell Energy](https://www.shellenergy.co.uk/).
-
-## Social media
-
-* TBD
-
-## Some bookmarks
-
-* None yet :)

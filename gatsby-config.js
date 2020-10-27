@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `CarlosGM`,
     description: `Just a software engineer writing about Human-Computer Interaction, development practices, JavaScript development and other stuff...`,
+    descripcion: 'Un blog sobre ingeniería software, Interacción Persona-Ordenador, JavaScript y alguna que otra cosa...',
     author: `Carlos Garcia Martin`,
   },
   plugins: [

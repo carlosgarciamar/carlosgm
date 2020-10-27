@@ -18,14 +18,17 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            descripcion
             author
           }
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const defaultDescription = process.env.GATSBY_LANGUAGE === 'es' ? site.siteMetadata.descripcion : site.siteMetadata.description;
+
+  const metaDescription = description || defaultDescription;
 
   return (
     <Helmet
@@ -33,7 +36,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      defaultTitle={site.siteMetadata.title}
       meta={[
         {
           name: `description`,
@@ -69,20 +72,20 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;
