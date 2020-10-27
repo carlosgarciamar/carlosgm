@@ -22,11 +22,3 @@ Más allá de estas tecnologías, también estoy interesado en las siguientes me
 En ocasiones también desvarío sobre filosofía, política o música. Es fácil encontrarme en conciertos y festivales o entrenando en [Crossfit Digbeth](https://www.crossfitdigbeth.com/).
 
 Actualmente resido en [Birmingham](https://www.google.com/maps/place/Birmingham,+United+Kingdom/) y trabajo en [Shell Energy](https://www.shellenergy.co.uk/).
-
-## Redes sociales
-
-* Por rellenar
-
-## Algunos enlaces
-
-* Ninguno por ahora :)
