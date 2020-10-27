@@ -1,21 +1,21 @@
 ---
-title: 'Como crear un sitio multi-idioma usando Gatsby y AWS Amplify'
+title: 'Creating and hosting a multilanguage site with Gatsby and AWS Amplify'
 date: 2020-10-25
 categories: [javascript, frontend]
-language: es
+language: en
 ---
 
-En este artículo explicaré como crear fácilmente un sitio estático con varios idiomas usando [Gatsby](https://gatsbyjs.com) y [AWS Amplify](https://aws.amazon.com/amplify/). Estos son los mismos pasos que he seguido para crear este blog. Necesitarás una [cuenta de AWS](https://aws.amazon.com/account) y deberás tener [NodeJS](http://nodejs.org) con npm instalado.
+In this article I will explain how to easily create a static site with multi-language support using [Gatsby](https://gatsbyjs.com) and [AWS Amplify](https://aws.amazon.com/amplify/). These are the steps that I have followed to create this very same blog. You will require to [have an AWS account](https://aws.amazon.com/account) and you will need to have [NodeJS](http://nodejs.org) with npm installed.
 
 <!-- start -->
 
-## Creando un sitio web con Gatsby
+# Creating a Gatsby site
 
-Lo primero es que crees un sitio web usando Gatsby. Gatsby tiene en su web una [guía rápida](https://www.gatsbyjs.com/docs/quick-start/) y un [tutorial completo](https://www.gatsbyjs.com/tutorial/) sobre como hacer esto. Crea tu sitio primero en el idioma principal que vayas a usar.
+First of all you will need to create a Gatsby site. Gatsby offers both a [quick start guide](https://www.gatsbyjs.com/docs/quick-start/) and a [tutorial](https://www.gatsbyjs.com/tutorial/) on how to do this. Build your site first in your main language and add some content to it.
 
-Ua vez estés maás o menos contento con cómo se ve tu sitio en tu ordenador (podrás hacer más modificaciones en el futuro, no te preocupes), haz `push`a un repositorio git remoto que se pueda acceder desde AWS, idealmente en [Github](https://github.com) o [Bitbucket](https://bitbucket.org/).
+Once you are more or less happy with your site locally (you will be able to make as improvements as needed in the future), push it to a Git repository that can be accessed externally, ideally on [Github](https://github.com) or [Bitbucket](https://bitbucket.org/).
 
-## Hosting your site on AWS Amplify
+# Hosting your site on AWS Amplify
 
 Log into your AWS console and use the dropdown to find AWS Amplify, you should see the title `Get started with the Amplify Console` (if not, click on the `Connect App` button). Select the service you used to host your code, click `Continue` and log into the service.
 
@@ -31,7 +31,7 @@ While you are still on `AWS Amplify` go to `Environment variables` and add a new
 
 ![AWS Amplify - Environment variables](./img/mutilanguage-site-gatsby-amplify-02.png)
 
-## Modifying our site to support a second language
+# Modifying our site to support a second language
 
 The environment variable that we just created will be useful in order to identify the correct language within our site. This will be useful towards:
 * enabling switching from one language to another;
@@ -44,20 +44,20 @@ GATSBY_LANGUAGE=en
 ```
 But with your language code instead of `en`. You will need to reload gatsby every time you change this variable will you develop. Now we are ready to implement our second language.
 
-### Switching between languages
+## Switching between languages
 
 You will need to create a custom component.
 
-### Serving content in the correct language
+## Serving content in the correct language
 
 Your content should be tagged and you should filter it.
 
-## Creating your second app
+# Creating your second app
 
 Create a second app in AWS Amplify with the new variable.
 
-### Create as many languages as you want
+## Create as many languages as you want
 
-## SEO and further improvements
+# SEO and further improvements
 
 Make sure all your meta are in the correct language depending on env variable.

@@ -44,6 +44,12 @@ module.exports = {
               maxWidth: 590,
             },
           },
+          {
+            resolve: `gatsby-remark-behead`,
+            options: {
+              depth: 2,
+            },
+          },
         ]
       }
     },

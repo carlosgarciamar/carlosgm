@@ -3,6 +3,7 @@ title: 'Bienvenida'
 date: 2020-10-24
 categories: [welcome]
 language: es
+hide: true
 ---
 
 Bienvenido a mi página personal, soy un ingeniero software interesado en crear experiencias web humanas y bien diseñadas. Algunas de las tecnologías que utilizo para conseguirlo son:
