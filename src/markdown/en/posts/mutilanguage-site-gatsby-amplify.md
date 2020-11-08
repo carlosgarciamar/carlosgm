@@ -40,10 +40,9 @@ Before moving to the next step it is important that you go to `App settings -> R
 
 # Modifying our site to support a second language
 
-The environment variable that we just created will be useful in order to identify the correct language within our site. This will be useful towards:
-
--   enabling switching from one language to another;
--   serving content in the correct language.
+The environment variable that we just created will be useful in order to identify the correct language within our site. This will enable:
+-   serving content in the correct language,
+-   switching from one language to another.
 
 Before you do any of this you should create a `.env.development` file in the root of your Gatsby site and write in it your `GATSBY_LANGUAGE` variable. It should look like the following:
 
@@ -135,7 +134,7 @@ export const query = graphql`
 
 ## Switching between languages
 
-Start planning your strategy to serve content in two different languages, you can go for:
+Start planning your strategy to serve content in different languages, you can go for:
 
 1. Completely separate TLDs (this is the case of this blog, with the `.com` serving English language and the `.es` serving Spanish language)
 2. Separate subdomains (for instance, with http://en.example.com serving English language and http://pt.example.com serving Portuguese language)
@@ -171,7 +170,7 @@ From here it should be trivial to create new apps on AWS Amplify with any new la
 
 Once you have deployed the new app, Gatsby will pick up any environment variable prefixed with `GATSBY_` and use our `GATSBY_LANGUAGE` variable to build the pages for the relevant language.
 
-Finally you should configure your domain and
+Finally you should configure your domains or subdomains on your different Amplify apps to match the links in our component to switch languages. Go to `App settings -> Domain management` and click on `Add domain`. Follow the instructions and create subdomains accordingly if needed.
 
 # SEO and further improvements
 
