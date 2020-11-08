@@ -1,4 +1,3 @@
-
 # carlosgm
 
 Repo for my very own site, very early development. Created with [Gatsby](https://gatsbyjs.com).
@@ -26,15 +25,15 @@ Create a `GATSBY_LANGUAGE` OS env variable with value `en` or `es`.
 `yarn build` - Build all static resources\
 `yarn serve` - Serve the stuff that you built
 
-
 ## TO-DO:
 
-- Finish multilanguage support
-- Finish SEO and optimisations
-- Add some more strict linting and prettier rules
-- Write more content
-- Add social media
+-   Finish multilanguage support
+-   Finish SEO and optimisations
+-   Add some more strict linting and prettier rules
+-   Write more content
+-   Add social media
 
 Some ideas...
-- Light/Dark theme support
-- Comments
+
+-   Light/Dark theme support
+-   Comments

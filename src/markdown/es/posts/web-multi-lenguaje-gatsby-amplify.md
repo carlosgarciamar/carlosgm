@@ -3,6 +3,7 @@ title: 'Como crear un sitio multi-idioma usando Gatsby y AWS Amplify'
 date: 2020-10-25
 categories: [javascript, frontend]
 language: es
+related: '/mutilanguage-site-gatsby-amplify'
 ---
 
 En este artículo explicaré como crear fácilmente un sitio estático con varios idiomas usando [Gatsby](https://gatsbyjs.com) y [AWS Amplify](https://aws.amazon.com/amplify/). Estos son los mismos pasos que he seguido para crear este blog. Necesitarás una [cuenta de AWS](https://aws.amazon.com/account) y deberás tener [NodeJS](http://nodejs.org) con npm instalado.
@@ -34,14 +35,16 @@ While you are still on `AWS Amplify` go to `Environment variables` and add a new
 # Modifying our site to support a second language
 
 The environment variable that we just created will be useful in order to identify the correct language within our site. This will be useful towards:
-* enabling switching from one language to another;
-* serving content in the correct language.
+
+-   enabling switching from one language to another;
+-   serving content in the correct language.
 
 Before you do any of this you should create a `.env.development` file in the root of your Gatsby site and write in it your `GATSBY_LANGUAGE` variable. It should look like the following:
 
 ```
 GATSBY_LANGUAGE=en
 ```
+
 But with your language code instead of `en`. You will need to reload gatsby every time you change this variable will you develop. Now we are ready to implement our second language.
 
 ## Switching between languages
