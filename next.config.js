@@ -6,11 +6,11 @@ module.exports = {
     localeDetection: false,
     domains: [
       {
-        domain: 'carlosgm.com',
+        domain: 'www.carlosgm.com',
         defaultLocale: 'en-GB',
       },
       {
-        domain: 'carlosgm.es',
+        domain: 'www.carlosgm.es',
         defaultLocale: 'es-ES',
       },
     ],
