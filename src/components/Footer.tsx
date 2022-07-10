@@ -12,6 +12,7 @@ const Footer = () => (
       height="1074"
       layout="responsive"
       alt="A drawing of Carlos holding a sword and a shield inspired on the videogame Zelda"
+      priority
     />
     <div className="text-right">
       <div>
