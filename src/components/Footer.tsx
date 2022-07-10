@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import background from '../../public/carlosgm-bg1216.png';
+import background from '../../public/carlosgm-bg769.png';
 
 const Footer = () => (
   <footer
@@ -8,8 +8,8 @@ const Footer = () => (
   >
     <Image
       src={background}
-      width="769"
-      height="679"
+      width={769}
+      height={679}
       layout="responsive"
       alt="A drawing of Carlos holding a sword and a shield inspired on the videogame Zelda"
       priority
