@@ -8,8 +8,8 @@ const Footer = () => (
   >
     <Image
       src={background}
-      width="1216"
-      height="1074"
+      width="769"
+      height="679"
       layout="responsive"
       alt="A drawing of Carlos holding a sword and a shield inspired on the videogame Zelda"
       priority
