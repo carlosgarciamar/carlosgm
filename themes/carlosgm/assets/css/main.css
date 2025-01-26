@@ -39,9 +39,22 @@
 
 footer {
   margin-top: -300px;
+
+  width: calc(100% + 4px);
+
+  @media (width >= 48rem) {
+    width: calc(100% + 8px);
+  }
+}
+
+.footer-width-8px {
   width: calc(100% + 8px);
 }
 
 .text-red-gm {
   color: #d84b39;
+}
+
+.container {
+  max-width: 1024px;
 }
