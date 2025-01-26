@@ -1,0 +1,4 @@
+baseURL = 'https://carlosgm.com/'
+languageCode = 'es-es'
+title = 'carlosgm'
+theme = "carlosgm"

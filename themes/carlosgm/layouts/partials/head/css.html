@@ -1,0 +1,16 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;800&family=Permanent+Marker&display=swap"
+  rel="stylesheet" />
+{{- with resources.Get "css/main.css" | postCSS }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link
+        rel="stylesheet"
+        href="{{ .RelPermalink }}"
+        integrity="{{ .Data.Integrity }}"
+        crossorigin="anonymous" />
+    {{- end }}
+  {{- end }}
+{{- end }}
